@@ -1,0 +1,30 @@
+
+.intro-section{
+  display: flex;
+  position: relative;
+  top: 450px;
+  right: 40px;
+}
+
+.intro-section__img{
+  width: 25vw;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.intro-section__container{
+  display: flex;
+  flex-direction: row;
+}
+
+.intro-section__text-div{
+  padding: 40px;
+  background-color: rgb(20, 52, 89);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+}
+
+.intro-section__text{
+  color: white;
+}

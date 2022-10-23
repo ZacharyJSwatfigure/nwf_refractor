@@ -1,0 +1,24 @@
+
+
+.sidebar-container {
+  position: fixed;
+  top:88px;
+  width: 150px;
+  height: 600px;
+  z-index: 1;
+  animation-duration: 1;
+  transition-timing-function: ease-in-out;
+}
+
+.sidebar-title{
+  color:red;
+  background-color: yellow;
+}
+
+.sidebar-list{
+  
+}
+
+.sidebar-listitem{
+
+}

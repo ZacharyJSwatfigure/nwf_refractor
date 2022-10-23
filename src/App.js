@@ -1,23 +1,61 @@
-import logo from './logo.svg';
-import './App.css';
+import Navbar from "./client/components/navbar/Navbar";
+import ScrollNavbar from "./client/components/navbar/ScrollNavbar";
+import CurrentPage from "./client/components/CurrentPage";
+import SideBar from "./client/components/sidebar/SideBar";
+import React, { useState, useEffect } from "react";
+import LandingPage from "./client/pages/landingpage";
+import "./client/components/style/App.css";
 
 function App() {
+  const [page, setPage] = useState(<LandingPage />);
+  const [navbar, setNavbar] = useState(true);
+  const [sidebar, setSideBar] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      console.log("scroll", window.scrollY);
+    };
+    window.addEventListener("scroll", () => {
+      handleScroll();
+      navbarController(window.scrollY);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const navbarController = (height) => {
+    if (height < 150) {
+      setNavbar(true);
+    } else if (height > 150) {
+      setNavbar(false);
+    } else {
+      console.error("error");
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="theAllHolder">
+      <div>
+        {navbar ? (
+          <Navbar setPage={setPage} />
+        ) : (
+          <ScrollNavbar
+            sidebar={sidebar}
+            setSideBar={setSideBar}
+            setPage={setPage}
+          />
+        )}
+      </div>
+      <CurrentPage page={page} setPage={setPage} />
+      <div>
+        {sidebar === true ? (
+          <SideBar setSideBar={setSideBar} sidebar={sidebar} />
+        ) : (
+          <p />
+        )}
+      </div>
     </div>
   );
 }

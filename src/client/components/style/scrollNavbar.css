@@ -1,0 +1,25 @@
+.scrollnav-container {
+  position: fixed;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(70, 133, 170);
+  z-index: 1;
+}
+
+.waffleIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10%;
+  margin: 2rem;
+}
+
+.waffleIcon:hover{
+  background-color: rgb(70, 133, 170);
+}

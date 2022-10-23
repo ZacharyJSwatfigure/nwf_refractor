@@ -1,0 +1,31 @@
+
+.lIntro-section{
+  padding-top: 10px;
+  display: flex;
+  position: relative;
+  top: 450px;
+  right: 40px;
+}
+
+.lIntro-section__img{
+  width: 25vw;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.lIntro-section__container{
+  display: flex;
+  flex-direction: row;
+}
+
+.lIntro-section__text-div{
+  padding: 40px;
+  background-color: rgb(20, 52, 89);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+}
+
+.lIntro-section__text{
+  color: white;
+}

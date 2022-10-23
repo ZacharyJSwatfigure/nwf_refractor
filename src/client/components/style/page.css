@@ -1,0 +1,9 @@
+
+
+.page-container{
+  position: relative;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
