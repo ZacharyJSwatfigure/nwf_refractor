@@ -1,9 +1,9 @@
 import React from "react";
-import background from "../../img/background.mp4";
+import background from "../../img/fullBackground.mp4";
 import "../../style/carousel.css";
-import CarouselSlides from "./CarouselSlides";
+// import CarouselSlides from "./CarouselSlides";
 
-function CarouselVideo({ page, setPage }) {
+function CarouselVideo() {
   return (
     <div>
       <video
@@ -14,7 +14,7 @@ function CarouselVideo({ page, setPage }) {
         loop
         muted
       />
-      <CarouselSlides page={page} setPage={setPage} />
+      {/* <CarouselSlides page={page} setPage={setPage} /> */}
     </div>
   );
 }

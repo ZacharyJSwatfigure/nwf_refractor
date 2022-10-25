@@ -1,0 +1,46 @@
+
+
+.slides-container{
+  color: white;
+  padding : 10px;
+}
+
+.carousel-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.allHolderSlides{
+  color: white;
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-layout{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+.btn{
+  border-bottom: 1px solid white;
+  background: transparent;
+}
+
+.btn-right {
+  position: relative;
+  right: -400px;
+}
+
+.btn-left {
+  position: relative;
+  right: 400px;
+}
